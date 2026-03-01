@@ -1,10 +1,10 @@
-import { Button, type ButtonVariant } from './Button';
-import './Keypad.css';
+import { Button, type ButtonVariant } from './Button'
+import './Keypad.css'
 
 interface KeyConfig {
-  label: string;
-  variant: ButtonVariant;
-  wide?: boolean;
+  label: string
+  variant: ButtonVariant
+  wide?: boolean
 }
 
 const keys: KeyConfig[][] = [
@@ -37,10 +37,10 @@ const keys: KeyConfig[][] = [
     { label: '.', variant: 'number' },
     { label: '=', variant: 'equals' },
   ],
-];
+]
 
 interface KeypadProps {
-  onKey?: (key: string) => void;
+  onKey?: (key: string) => void
 }
 
 function Keypad({ onKey }: KeypadProps) {
@@ -48,7 +48,7 @@ function Keypad({ onKey }: KeypadProps) {
     <div className="keypad">
       {keys.map((row, rowIndex) => (
         <div key={rowIndex} className="keypad-row">
-          {row.map((key) => (
+          {row.map(key => (
             <Button
               key={key.label}
               label={key.label}
@@ -60,20 +60,20 @@ function Keypad({ onKey }: KeypadProps) {
         </div>
       ))}
     </div>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
 export default function KeypadPreview() {
   const handleKey = (key: string) => {
-    alert(`Key pressed: ${key}`);
-  };
+    alert(`Key pressed: ${key}`)
+  }
 
   return (
     <div className="preview-container">
       <Keypad onKey={handleKey} />
     </div>
-  );
+  )
 }
 
-export { Keypad };
+export { Keypad }

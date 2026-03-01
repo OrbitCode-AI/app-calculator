@@ -1,19 +1,17 @@
-import './Display.css';
+import './Display.css'
 
 interface DisplayProps {
-  expression: string;
-  result: string;
+  expression: string
+  result: string
 }
 
 function Display({ expression, result }: DisplayProps) {
   return (
     <div className="display">
       <div className="display-expression">{expression || '0'}</div>
-      <div className={`display-result ${result ? 'visible' : ''}`}>
-        {result && `= ${result}`}
-      </div>
+      <div className={`display-result ${result ? 'visible' : ''}`}>{result && `= ${result}`}</div>
     </div>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -29,7 +27,7 @@ export default function DisplayPreview() {
       <h3>Error state:</h3>
       <Display expression="1 / 0" result="Infinity" />
     </div>
-  );
+  )
 }
 
-export { Display };
+export { Display }

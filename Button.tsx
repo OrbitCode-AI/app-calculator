@@ -1,23 +1,20 @@
-import './Button.css';
+import './Button.css'
 
-type ButtonVariant = 'number' | 'operator' | 'action' | 'equals';
+type ButtonVariant = 'number' | 'operator' | 'action' | 'equals'
 
 interface ButtonProps {
-  label: string;
-  variant?: ButtonVariant;
-  wide?: boolean;
-  onClick?: () => void;
+  label: string
+  variant?: ButtonVariant
+  wide?: boolean
+  onClick?: () => void
 }
 
 function Button({ label, variant = 'number', wide = false, onClick }: ButtonProps) {
   return (
-    <button
-      className={`calc-button ${variant} ${wide ? 'wide' : ''}`}
-      onClick={onClick}
-    >
+    <button className={`calc-button ${variant} ${wide ? 'wide' : ''}`} onClick={onClick}>
       {label}
     </button>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -34,8 +31,8 @@ export default function ButtonPreview() {
       <h3>Wide button:</h3>
       <Button label="0" variant="number" wide />
     </div>
-  );
+  )
 }
 
-export { Button };
-export type { ButtonVariant };
+export { Button }
+export type { ButtonVariant }

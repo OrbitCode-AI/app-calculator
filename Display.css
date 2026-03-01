@@ -14,7 +14,7 @@
   color: white;
   text-align: right;
   word-break: break-all;
-  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-family: "SF Mono", "Fira Code", monospace;
 }
 
 .display-result {
@@ -25,7 +25,7 @@
   opacity: 0;
   transform: translateY(-10px);
   transition: all 0.2s ease;
-  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-family: "SF Mono", "Fira Code", monospace;
 }
 
 .display-result.visible {

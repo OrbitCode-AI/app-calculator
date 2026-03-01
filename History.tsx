@@ -1,7 +1,7 @@
-import './History.css';
+import './History.css'
 
 interface HistoryProps {
-  entries: string[];
+  entries: string[]
 }
 
 function History({ entries }: HistoryProps) {
@@ -11,7 +11,7 @@ function History({ entries }: HistoryProps) {
         <h3 className="history-title">History</h3>
         <p className="history-empty">No calculations yet</p>
       </div>
-    );
+    )
   }
 
   return (
@@ -25,17 +25,12 @@ function History({ entries }: HistoryProps) {
         ))}
       </ul>
     </div>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
 export default function HistoryPreview() {
-  const sampleHistory = [
-    '123 + 456 = 579',
-    '100 * 5 = 500',
-    '999 / 3 = 333',
-    '50 - 25 = 25',
-  ];
+  const sampleHistory = ['123 + 456 = 579', '100 * 5 = 500', '999 / 3 = 333', '50 - 25 = 25']
 
   return (
     <div className="preview-container">
@@ -44,7 +39,7 @@ export default function HistoryPreview() {
       <h3>With entries:</h3>
       <History entries={sampleHistory} />
     </div>
-  );
+  )
 }
 
-export { History };
+export { History }
